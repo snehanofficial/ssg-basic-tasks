@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library System - Js Task Day-2</title>
+
+    <script>
+        function library() {
+            let uname = prompt("Enter your username: ")
+
+            if (uname == "library") {
+                let pwd = prompt(`Hello ${uname}, Enter your password: `)
+
+                if (pwd == "book123") {
+                    let borrow = confirm("Do you want to borrow a book?")
+
+                    if (borrow) {
+                        let category = prompt("Enter 1 for Fiction, 2 for Science, 3 for History: ")
+
+                        switch (category) {
+                            case "1":
+                                alert("You selected Fiction");
+                                break;
+                            
+                            case "2":
+                                alert("You selected Science");
+                                break;
+                            
+                            case "3":
+                                alert("You selected History");
+                                break;
+
+                            default:
+                                alert("Invalid category");
+                                break;
+                        }
+                    }
+                    else {
+                        alert("Maybe next time! Goodbye!");
+                    }
+                }
+
+                else {
+                    alert("Invalid login!")
+                }
+            }
+
+        else {
+            alert("Invalid login!")
+        }
+        }
+
+        library();
+
+    </script>
+
+</head>
+<body>
+    <h1>Library system closed.. Refresh to restart...</h1>
+</body>
+</html>
