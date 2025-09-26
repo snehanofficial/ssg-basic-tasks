@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Task - Day 2</title>
+    <script>
+        function voter_check() {
+            let name = prompt("Enter your name: ");
+            let age = prompt("Enter your age: ");
+
+            if (age>=18) {
+                alert(`Hello ${name}, you are eligible to vote.`);
+            }
+            else {
+                alert(`Sorry ${name}, you are not eligible to vote.`);
+            }
+            
+            let repeat = confirm("Do you want to check again?");
+
+            if (repeat) {
+                voter_check();
+            } 
+            else {
+                alert("Goodbye!")
+            }
+        }
+
+        voter_check()
+
+    </script>
+    
+</head>
+<body>
+    <h1>Voter eligibility check completed...</h1>
+</body>
+</html>
