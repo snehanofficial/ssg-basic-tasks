@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Quiz App - Js Task Day-3</title>
+
+    <script>
+        let score = 0;
+
+        let q1 = Number(prompt("What is the capital of Tamil Nadu?\n1. Madurai\n2. Erode\n3. Chennai\n4. Coimbatore"));
+        let q2 = Number(prompt("What is the common name of H2O?\n1. Hydrogen\n2. Water\n3. Chocolate\n4. Acid"));
+        let q3 = Number(prompt("Who is known as the \"Father of Computers\"?\n1. Charles Xavier\n2. Isaac Newton\n3. Charles Babbage\n4. You!"));
+
+        if (q1 == 3) {
+            score++;
+        }
+        if (q2 == 2) {
+            score++;
+        }
+        if (q3 == 3) {
+            score++;
+        }
+
+        alert(`Your final score: ${score}/3`);
+    </script>
+</head>
+<body>
+    <h1>Mini Quiz App closed! Refresh to restart..</h1>
+</body>
+</html>
