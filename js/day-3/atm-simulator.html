@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATM Simulator - Js Task Day-3</title>
+
+    <script>
+        let balance = 1000;
+        alert("Welcome to SSG Bank of India!");
+        let pin = Number(prompt("Enter your ATM PIN: "));
+
+        if (pin == 1234) {
+            let choice = Number(prompt("Enter 1 for withdrawals,\n2 for Deposit,\n3 to check balance."));
+
+            switch (choice) {
+
+                case 1:
+                    amount = prompt("Enter the amount to withdraw: ");
+
+                    if (balance >= amount) {
+                        balance -= amount;
+                        alert("Please collect your cash.");
+                        alert("Current balance: " + balance);
+                    } else {
+                        alert("Insufficient funds.\nPlease try again later..");
+                    }
+                    break;
+                
+                case 2:
+                    depositAmount = Number(prompt("Enter the amount you want to deposit: "));
+
+                    if (depositAmount > 0) {
+                        balance += depositAmount;
+                        alert("Deposited successfully!\nCurrent balance: " + balance);
+                    } else {
+                        alert("Enter positive values only.");
+                    }
+                    break;
+
+                case 3:
+                    alert("Your current balance is Rs. " + balance);
+                    break;
+                
+                default:
+                    alert("Invalid input.\nPlease try again later!");
+            }
+        } else {
+            alert("Incorrect PIN!\nPlease try again later..");
+        }
+
+        alert("Thank you for your vist!");
+    </script>
+</head>
+<body>
+    <h1>ATM Simulator Closed.. Refresh to restart!</h1>
+</body>
+</html>
