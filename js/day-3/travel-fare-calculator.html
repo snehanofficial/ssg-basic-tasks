@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Fare Calculator - Js Task Day-3</title>
+
+    <script>
+        alert("Welcome to the Travel Fare Calculator!");
+
+        let distanceTravelled = Number(prompt("Enter the distance travelled (in km):"));
+        let vehicleType = Number(prompt("Enter the mode of transport (1-4): \n1. Two wheeler \n2. Auto \n3. Car \n4. Train"));
+        let fare;
+
+        if (1 <= vehicleType <= 4) {
+            switch (vehicleType) {
+                case 1:
+                    fare = 5;
+                    break;
+                
+                case 2:
+                    fare = 10;
+                    break;
+                
+                case 3:
+                    fare = 15;
+                    break;
+                
+                case 4:
+                    fare = 7;
+                    break;
+            
+                default:
+                    break;
+            }
+
+            let totalFare = distanceTravelled * fare;
+
+            alert(`Total fare: ${totalFare}`);
+        } else {
+            alert("Invalid vehicle! \nPlease try again later..");
+        }
+    </script>
+</head>
+<body>
+    <h1>Travel Fare Calculator is closed.. Refresh to Restart!</h1>
+</body>
+</html>
