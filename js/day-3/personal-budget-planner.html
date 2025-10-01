@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Budget Planner - Js Task Day-3</title>
+
+    <script>
+        alert("Welcome to Personal Budget Planner");
+
+        // Taking inputs from user
+        let monthlyIncome = Number(prompt("Enter your monthly income:"));
+        let rent = Number(prompt("Enter the monthly rent you pay:"));
+        let groceries = Number(prompt("How much you spend on groceries per month:"));
+        let transport = Number(prompt("How much you spend on transportation per month:"));
+        let otherExpenses = Number(prompt("Enter other expenses:"));
+    
+        // Doing all necessary calculations
+        let totalExpenses = (rent + groceries + transport + otherExpenses);
+        let remainingBalance = monthlyIncome - totalExpenses;
+        let percentageSpent = (totalExpenses/monthlyIncome)*100;
+
+        let message;
+        if (percentageSpent <= 100){
+            message = "You are within budget.";
+        } else {
+            message = "You are exceeding your budget!";
+        }
+        
+        // Printing the output
+        alert(`Total Expenses: ${totalExpenses} \n\nRemaining Balance: ${remainingBalance} \n\nPercentage Spent: ${percentageSpent.toFixed(2)}% \n\nMessage: ${message}`);
+
+    </script>
+</head>
+<body>
+    <h1>Personal Budget Planner Closed.. Refresh to restart!</h1>
+</body>
+</html>
